@@ -13,3 +13,4 @@ jobs:
     - run: |
         echo ${{ github.ref }}
         echo ${{ env.GITHUB_TAG }}
+        echo ${GITHUB_REF#refs/tags/}
