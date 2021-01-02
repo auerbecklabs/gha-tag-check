@@ -16,3 +16,4 @@ jobs:
     - run: |
         echo 'hello'
         echo 'world'
+        echo 'again'
