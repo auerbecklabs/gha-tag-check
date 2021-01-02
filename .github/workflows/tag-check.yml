@@ -2,7 +2,7 @@ name: Tag Check
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
 
 jobs:
   tag-check:
