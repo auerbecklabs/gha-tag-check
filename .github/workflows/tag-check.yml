@@ -12,3 +12,4 @@ jobs:
     - uses: actions/checkout@v2
     - run: |
         cat ${{ github.event_path }}
+        echo 'hello'
