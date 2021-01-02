@@ -11,5 +11,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - run: |
-        cat ${{ github.event_path }}
-        echo 'hello'
+        echo "$GITHUB_REF"
+    - run: |
+        git describe --tags --abbrev=0
