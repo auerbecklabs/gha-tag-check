@@ -11,6 +11,4 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - run: |
-        echo ${{ github.ref }}
-        echo ${{ env.GITHUB_TAG }}
-        echo ${GITHUB_REF#refs/tags/}
+        cat ${{ github.event_path }}
