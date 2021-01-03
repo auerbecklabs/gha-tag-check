@@ -14,4 +14,3 @@ jobs:
     - run: |
         echo "$GITHUB_REF"
         echo ${GITHUB_REF:10}
-	echo 'This is a tag'
