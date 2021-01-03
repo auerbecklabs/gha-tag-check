@@ -1,0 +1,17 @@
+name: Tag Check Tag
+
+on:
+  push:
+    tags:
+      - 'release-*'
+
+jobs:
+  tag-check:
+    runs-on: ubuntu-latest
+    name: Tag Checker
+    steps:
+    - uses: actions/checkout@v2
+    - run: |
+        echo "$GITHUB_REF"
+        echo ${GITHUB_REF:10}
+	echo 'This is a tag'
