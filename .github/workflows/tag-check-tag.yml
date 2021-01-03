@@ -14,3 +14,10 @@ jobs:
     - run: |
         echo "$GITHUB_REF"
         echo ${GITHUB_REF:10}
+    - run: |
+        git ls-remote --exit-code --heads origin
+    - run: |
+        if ! git ls-remote --exit-code --heads origin ${GITHUB_REF:10}; then
+          checkoutBranch=main
+        fi
+        echo $checkoutBranch
